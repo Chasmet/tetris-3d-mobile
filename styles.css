@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #0f172a, #020617);
+  color: white;
+}
+
+.app {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 12px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 6px;
+  font-size: 32px;
+}
+
+p {
+  margin-top: 0;
+  color: #cbd5e1;
+  font-size: 15px;
+}
+
+.game-box {
+  margin: 14px auto;
+  width: 280px;
+  background: #111827;
+  border: 2px solid #334155;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+canvas {
+  display: block;
+  background: #0b1220;
+  width: 280px;
+  height: 560px;
+}
+
+.panel {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 12px 0;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-size: 13px;
+}
+
+.controls,
+.actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.controls {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.actions {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+button {
+  padding: 16px 10px;
+  border: none;
+  border-radius: 14px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button:active {
+  transform: scale(0.96);
+  background: #1d4ed8;
+}
+
+@media (max-width: 380px) {
+  .app {
+    max-width: 320px;
+    padding: 10px;
+  }
+
+  .game-box {
+    width: 250px;
+  }
+
+  canvas {
+    width: 250px;
+    height: 500px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 14px 8px;
+  }
+
+  .panel {
+    font-size: 12px;
+  }
+}
