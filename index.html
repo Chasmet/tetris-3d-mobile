@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#07111f" />
+  <title>Tetris Real Blocks</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell level-1" id="appShell">
+    <header class="topbar">
+      <div>
+        <h1>Tetris Real Blocks</h1>
+        <p>Version mobile avec manette séparée</p>
+      </div>
+      <div class="topbar-actions">
+        <button id="startBtn">Jouer</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="restartBtn">Relancer</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="game-panel">
+        <div class="panel-glass hero" id="heroPanel">
+          <div class="level-banner">
+            <span id="levelName">Niveau 1 - Arcade</span>
+            <span id="levelObjective">Objectif : 8 lignes</span>
+          </div>
+          <canvas id="gameCanvas" width="420" height="760" aria-label="Plateau de jeu"></canvas>
+          <div class="overlay hidden" id="overlay">
+            <div class="overlay-card">
+              <h2 id="overlayTitle">Pause</h2>
+              <p id="overlayText">Appuie sur jouer pour commencer</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="side-panel">
+        <div class="panel-glass stats-card">
+          <div class="stat"><span>Score</span><strong id="scoreValue">0</strong></div>
+          <div class="stat"><span>Niveau</span><strong id="levelValue">1</strong></div>
+          <div class="stat"><span>Lignes</span><strong id="linesValue">0</strong></div>
+          <div class="stat"><span>Record</span><strong id="bestValue">0</strong></div>
+        </div>
+
+        <div class="panel-glass next-card">
+          <h3>Pièce suivante</h3>
+          <canvas id="nextCanvas" width="180" height="180"></canvas>
+        </div>
+
+        <div class="panel-glass info-card">
+          <h3>Décor actuel</h3>
+          <p id="levelDescription">Salle d'arcade moderne, lumières colorées et ambiance premium.</p>
+        </div>
+      </aside>
+    </main>
+
+    <section class="controller-shell panel-glass">
+      <div class="controller-header">
+        <span>Manette tactile</span>
+        <small>séparée de l'écran de jeu</small>
+      </div>
+      <div class="controller-grid">
+        <button class="ctrl-btn" data-action="left">◀</button>
+        <button class="ctrl-btn" data-action="rotate">⟳</button>
+        <button class="ctrl-btn" data-action="right">▶</button>
+        <button class="ctrl-btn ctrl-wide" data-action="down">▼ descente</button>
+        <button class="ctrl-btn ctrl-wide" data-action="drop">⤓ chute directe</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
